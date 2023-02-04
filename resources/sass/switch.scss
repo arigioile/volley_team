@@ -1,0 +1,151 @@
+// /* The switch - the box around the slider */
+// .switch {
+//     position: relative;
+//     display: inline-block;
+//     width: 40px;
+//     height: 24px;
+//   }
+
+//   /* Hide default HTML checkbox */
+//   .switch input {
+//     opacity: 0;
+//     width: 0;
+//     height: 0;
+//   }
+
+//   /* The slider */
+//   .slider {
+//     position: absolute;
+//     cursor: pointer;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background-color: #ccc;
+//     -webkit-transition: .4s;
+//     transition: .4s;
+//   }
+
+//   .slider:before {
+//     position: absolute;
+//     content: "";
+//     height: 16px;
+//     width: 16px;
+//     left: 4px;
+//     bottom: 4px;
+//     background-color: white;
+//     -webkit-transition: .4s;
+//     transition: .4s;
+//   }
+
+//   input:checked + .slider {
+//     background-color: #2196F3;
+//   }
+
+//   input:focus + .slider {
+//     box-shadow: 0 0 1px #2196F3;
+//   }
+
+//   input:checked + .slider:before {
+//     -webkit-transform: translateX(16px);
+//     -ms-transform: translateX(16px);
+//     transform: translateX(16px);
+//   }
+
+//   /* Rounded sliders */
+//   .slider.round {
+//     border-radius: 34px;
+//   }
+
+//   .slider.round:before {
+//     border-radius: 50%;
+//   }
+
+
+
+  .custom-switch .custom-switch-input {
+    display:none
+}
+
+.custom-switch .custom-switch-input, .custom-switch .custom-switch-input:after, .custom-switch .custom-switch-input:before, .custom-switch .custom-switch-input *, .custom-switch .custom-switch-input * :after, .custom-switch .custom-switch-input * :before, .custom-switch .custom-switch-input + .custom-switch-btn {
+    box-sizing:border-box
+}
+
+.custom-switch .custom-switch-input:selection, .custom-switch .custom-switch-input:after:selection, .custom-switch .custom-switch-input:before:selection, .custom-switch .custom-switch-input * :selection, .custom-switch .custom-switch-input * :after:selection, .custom-switch .custom-switch-input * :before:selection, .custom-switch .custom-switch-input + .custom-switch-btn:selection {
+    background:0 0
+}
+
+.custom-switch .custom-switch-input + .custom-switch-btn {
+    outline: 0;
+    display: inline-block;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    width: 34px;
+    height: 19px;
+    margin: 0;
+    padding: 2px;
+    background: #ced4da;
+    border-radius: 38px;
+    transition:all 300ms ease
+}
+
+.custom-switch .custom-switch-input + .custom-switch-btn:after, .custom-switch .custom-switch-input + .custom-switch-btn:before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 15px;
+    height:15px
+}
+
+.custom-switch .custom-switch-input + .custom-switch-btn:after {
+    left: 1px;
+    border-radius: 50%;
+    background: #fff;
+    transition:all 300ms ease
+}
+
+.custom-switch .custom-switch-input + .custom-switch-btn:before {
+    display:none
+}
+
+.custom-switch .custom-switch-input:checked + .custom-switch-btn {
+    background:#28a745
+}
+
+.custom-switch .custom-switch-input:checked + .custom-switch-btn:after {
+    left:14px
+}
+
+.custom-switch .custom-switch-input:checked + .custom-switch-btn ~ .custom-switch-content-checked {
+    opacity: 1;
+    height:auto
+}
+
+.custom-switch .custom-switch-input:checked + .custom-switch-btn ~ .custom-switch-content-unchecked {
+    display: none;
+    opacity: 0;
+    height:0
+}
+
+.custom-switch .custom-switch-input:not(:checked) + .custom-switch-btn ~ .custom-switch-content-checked {
+    display: none;
+    opacity: 0;
+    height:0
+}
+
+.custom-switch .custom-switch-input:not(:checked) + .custom-switch-btn ~ .custom-switch-content-unchecked {
+    opacity: 1;
+    height:auto
+}
+
+.custom-switch.custom-switch-label-perceuro .custom-switch-input + .custom-switch-btn {
+    background-image: url(data:image/svg+xml;charset=utf8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2OCcgaGVpZ2h0PSczOCc+PHRleHQgeD0nMjEuNScgeT0nMTMuNScgZm9udC1zaXplPScxMXB4JyBmb250LWZhbWlseT0nLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCBTZWdvZSBVSSwgUm9ib3RvLCBIZWx2ZXRpY2EgTmV1ZSwgQXJpYWwsIHNhbnMtc2VyaWYsIEFwcGxlIENvbG9yIEVtb2ppLCBTZWdvZSBVSSBFbW9qaSwgU2Vnb2UgVUkgU3ltYm9sJyBmaWxsPScjZmZmJz7igqw8L3RleHQ+PC9zdmc+)
+}
+
+.custom-switch.custom-switch-label-perceuro .custom-switch-input:checked + .custom-switch-btn {
+    background-image: url(data:image/svg+xml;charset=utf8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2OCcgaGVpZ2h0PSczOCc+PHRleHQgeD0nNScgeT0nMTMnIGZvbnQtc2l6ZT0nMTBweCcgZm9udC1mYW1pbHk9Jy1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhIE5ldWUsIEFyaWFsLCBzYW5zLXNlcmlmLCBBcHBsZSBDb2xvciBFbW9qaSwgU2Vnb2UgVUkgRW1vamksIFNlZ29lIFVJIFN5bWJvbCcgZmlsbD0nI2ZmZic+JTwvdGV4dD48L3N2Zz4=)
+}
